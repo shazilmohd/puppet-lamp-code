@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/example
+
+    <Directory /var/www/html/example>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+<IfModule mod_php5.c>
+   AddHandler php5-script  .php .html .htm
+   AddType text/html   .php .html .htm
+   AddType text/css .css
+</IfModule>
+
+
+</VirtualHost>
+
